@@ -60,7 +60,7 @@ public class indexMB extends BaseBean implements Serializable {
     
     
     public String preparedIndex(){
-        return "index?faces-redirect=true";
+        return "index.xhtml?faces-redirect=true";
     }
     
     public String preparedListadoProductos(){
