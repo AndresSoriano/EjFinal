@@ -110,10 +110,10 @@ public class UsuarioDAO {
         UsuarioDAO dao = new UsuarioDAO();
         Usuario dto = new Usuario();
        
-        dto.setIdUsuario(3);
-
-        dto = dao.read(dto);
-        dao.delete(dto);
+//        dto.setIdUsuario(3);
+//
+//        dto = dao.read(dto);
+//        dao.delete(dto);
         
         System.out.println(dao.readAll());
     }
