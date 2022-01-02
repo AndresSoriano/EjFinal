@@ -5,6 +5,8 @@
  */
 package com.ipn.mx.sesion;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.faces.context.FacesContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -22,9 +24,12 @@ public class Sesion {
     private HttpServletRequest httpServletRequest;
     HttpSession session;
     
+    private static final Logger logger = Logger.getLogger(Sesion.class.getName());
+    
     public static Sesion getInstance(){
         if(sesion == null){
             sesion = new Sesion();
+            logger.log(Level.INFO, "Creando clase Sesion .. !!!!!: ");
         }
         return sesion;
     }

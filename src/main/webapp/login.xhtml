@@ -24,7 +24,7 @@
 
                 <center>
                     <br/><br/><br/>
-                    <p:panel header="Login" style="width: 25rem;">
+                    <p:panel header="Iniciar Sesión" style="width: 22rem;">
 
                         <h:form id="frmLoginForm">
                             <h:panelGrid columns="1">
@@ -32,7 +32,7 @@
                                 <h:inputText id="txtUsr" value="#{sesionMB.nombreUsuario}"
                                              class="form-control" required="true" label="Nombre de Usuario"/>
                                 <!--<h:message for="txtUsr"/>-->
-                                <br/>
+
                                 <h:outputText value="Contraseña:  "/>
                                 <h:inputText id="txtPass" value="#{sesionMB.password}"
                                              class="form-control" required="true" label="Contraseña"/>
@@ -40,17 +40,14 @@
 
                             </h:panelGrid>
                             <br/>
-                            <h:commandButton action="#{sesionMB.vaidarCredenciales()}"
+                            <h:commandButton action="#{sesionMB.validarCredenciales()}"
                                              value="Iniciar Sesión"
-                                             class="btn btn-outline-success d-block"/>
-
-                        </h:form>
+                                             class="btn btn-primary"/>
+                        </h:form>                       
+                      
                     </p:panel>
 
                 </center>
-
-
-
             </h:form>
         </f:view>
     </h:body>
