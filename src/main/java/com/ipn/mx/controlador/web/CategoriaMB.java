@@ -16,6 +16,8 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
 import javax.faces.event.ActionEvent;
+import org.primefaces.model.chart.DonutChartModel;
+import org.primefaces.model.charts.ChartData;
 
 /**
  *
@@ -24,6 +26,7 @@ import javax.faces.event.ActionEvent;
 @ManagedBean(name = "categoriaMB")
 @SessionScoped
 public class CategoriaMB extends BaseBean implements Serializable {
+    
 
     private final CategoriaDAO dao = new CategoriaDAO();
     
@@ -60,6 +63,10 @@ public class CategoriaMB extends BaseBean implements Serializable {
         dto = new Categoria();
         setAccion(ACC_CREAR);
         return "categoriaForm.xhtml?faces-redirect=true";
+    }
+    
+    public String preparedGrafica(){
+        return "graficaCategorias?faces-redirect=true";
     }
     
     public String preparedUpdate(){
@@ -132,5 +139,5 @@ public class CategoriaMB extends BaseBean implements Serializable {
         }
     }
     
-    
+ 
 }

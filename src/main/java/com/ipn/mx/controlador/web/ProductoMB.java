@@ -132,6 +132,10 @@ public class ProductoMB extends BaseBean implements Serializable {
         return "index?faces-redirect=true";
     }
     
+    public String preparedGrafica(){
+        return "graficaProductos?faces-redirect=true";
+    }
+    
     public Boolean validate(){
         boolean valido = true;
         if(dto.getNombreProducto()==null){

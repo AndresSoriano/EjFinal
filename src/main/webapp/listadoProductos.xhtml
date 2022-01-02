@@ -77,9 +77,12 @@
 
                         </p:toolbarGroup>
                         <p:toolbarGroup align="right">
+                            <p:commandButton value="Ver Grafica" action="#{productoMB.preparedGrafica()}"
+                                                 immediate="true"
+                                                 styleClass="ui-button-help" rendered="#{!sesionMB.modoUnlogged}">
+                                </p:commandButton>
                             <p:commandButton value="#{msg['producto.boton.nuevo']}" action="#{productoMB.preparedAdd()}"
-                                             immediate="true"
-                                             class="btn btn-outline-success" rendered="#{!sesionMB.modoUnlogged}">
+                                             immediate="true" rendered="#{!sesionMB.modoUnlogged}">
                             </p:commandButton>
                         </p:toolbarGroup>
                     </p:toolbar>
