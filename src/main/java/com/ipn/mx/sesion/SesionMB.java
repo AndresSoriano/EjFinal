@@ -79,7 +79,7 @@ public class SesionMB extends SesionBean implements Serializable {
     public String cerrarSesion() {
         logger.log(Level.INFO, "Entrando a cerrar sesion: ");
 
-        sesion.getSession().invalidate();
+//        sesion.getSession().invalidate();
         setAccion(ACC_UNLOGGED);
         return "index?faces-redirect=true";
     }

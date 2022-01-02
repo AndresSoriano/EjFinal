@@ -7,6 +7,7 @@ package com.ipn.mx.controlador.web;
 
 import com.ipn.mx.modelo.dao.UsuarioDAO;
 import com.ipn.mx.modelo.entidades.Usuario;
+import com.ipn.mx.utilerias.EnviarMail;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -67,6 +68,11 @@ public class UsuarioMB extends BaseBean implements Serializable {
         return "usuarioForm.xhtml?faces-redirect=true";
     }
     
+    public String preparedLogin(){
+        setAccion(ACC_CREAR);
+        return "login?faces-redirect=true";
+    }
+    
     public String preparedUpdate(){
         setAccion(ACC_ACTUALIZAR);
         return "usuarioForm.xhtml?faces-redirect=true";
@@ -101,6 +107,23 @@ public class UsuarioMB extends BaseBean implements Serializable {
                 return preparedListadoUsuarios();
             else
                 return preparedAdd();
+        }
+        return preparedAdd();
+    }
+    
+    public String register(){
+        Boolean valido = validate();
+        EnviarMail mail = new EnviarMail();
+        if(valido){
+           
+            dao.create(dto);
+            if(valido){
+                mail.enviarCorreo(dto.getEmail(), "Usuario Registrado", 
+                        "Usted ha sido registrado satisfactoriamente!\n Bienvenido "+dto.getNombre()+"!\n\n Usuario: "+dto.getNombreUsuario()+"\n Clave: "+dto.getClaveUsuario()+" ");
+                return preparedLogin();
+            }else{
+                return preparedAdd();
+            }
         }
         return preparedAdd();
     }

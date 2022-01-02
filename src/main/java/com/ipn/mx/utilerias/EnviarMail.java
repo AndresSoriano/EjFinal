@@ -28,18 +28,18 @@ public class EnviarMail {
             p.setProperty("mail.smtp.host", "smtp.gmail.com");
             p.setProperty("mail.smtp.starttls.enable", "true");
             p.setProperty("mail.smtp.port", "587");
-            p.setProperty("mail.smtp.user", "correoespecifico@gmail.com");
+            p.setProperty("mail.smtp.user", "correonotificacioneswad@gmail.com");
             p.setProperty("mail.smtp.auth", "true");
             
             Session s = Session.getDefaultInstance(p);
             MimeMessage elMensaje = new MimeMessage(s);
             elMensaje.addRecipient(Message.RecipientType.TO, new InternetAddress(destinatario));
-            elMensaje.addRecipient(Message.RecipientType.CC, new InternetAddress("leojjosepf@gmail.com"));
+//            elMensaje.addRecipient(Message.RecipientType.CC, new InternetAddress("leojjosepf@gmail.com"));
             elMensaje.setSubject(asunto);
-            elMensaje.setText(asunto);
+            elMensaje.setText(mensaje);
             
             Transport t = s.getTransport("smtp");
-            t.connect(p.getProperty("user"), "CLAVEREALDELCORREO");
+            t.connect(p.getProperty("user"), "Claveadmin12345$");
             t.sendMessage(elMensaje, elMensaje.getAllRecipients());
             t.close();
             
