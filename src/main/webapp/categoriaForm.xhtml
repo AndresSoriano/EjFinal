@@ -15,7 +15,7 @@
                 <br/><br/><br/>
 
 
-                <p:panel header="Categoría" style="width: 25rem;">
+                <p:panel header="Categoría" style="width: 25rem;" rendered="#{!sesionMB.modoUnlogged}">
                     <h:form id="frmCategoriaForm">
                         <h:inputHidden id="accion" value="#{categoriaMB.accion}"/>
                         <h:panelGrid columns="3">
@@ -45,7 +45,7 @@
                                          class="btn btn-outline-success d-block"
                                          rendered="#{categoriaMB.modoActualizar}"/>
                     </h:form>
-                    <br/>
+                    <p:divider/>
                     <h:form id="frmCForm">
                         <h:commandLink action="listadoCategorias?faces-redirect=true" 
                                        class="btn btn-outline-info d-block">
@@ -53,6 +53,13 @@
                         </h:commandLink>
                     </h:form>
 
+                </p:panel>
+
+                <p:panel header="Sesion Requerida" rendered="#{sesionMB.modoUnlogged}"
+                         style="width: 20rem;">
+                    <p:commandLink action="#{sesionMB.cerrarSesion()}" immediate="true" class="btn btn-outline-primary d-block">
+                        <p:outputLabel value="Regresar al Inicio"/>
+                    </p:commandLink>
                 </p:panel>
 
             </center>

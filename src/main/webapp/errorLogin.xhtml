@@ -11,50 +11,44 @@
     </h:head>
     <h:body>
         <f:view>
-            <h:form id="frmErrorLogin">
 
-                <p:growl id="messages"/>
+            <center>
+                <br/><br/><br/>
+                <p:panel header="Iniciar Sesión" style="width: 22rem;">
+                    <p:growl id="messages"/>
+                    <h:form id="frmLogin">
 
-               
+                        <h:panelGrid columns="1">
+                            <h:outputText value="Nombre de Usuario: "/>
+                            <h:inputText id="txtUsr" value="#{sesionMB.nombreUsuario}"
+                                         class="form-control" required="true" label="Nombre de Usuario"/>
+                            <!--<h:message for="txtUsr"/>-->
 
-                <br/>
+                            <h:outputText value="Contraseña:  "/>
+                            <p:password  id="txtPass" value="#{sesionMB.password}"
+                                         class="form-control" required="true" label="Contraseña"/>
+                            <!--<h:message for="txtPass"/>-->
 
+                        </h:panelGrid>
+                        <br/>
+                        <h:commandButton action="#{sesionMB.validarCredenciales()}"
+                                         value="Iniciar Sesión"
+                                         class="btn btn-primary"/>                     
+                    </h:form>
 
-
-                <center>
-                    <br/><br/><br/>
-                    <p:panel header="Login" style="width: 25rem;">
-
-                        <h:form id="frmLoginForm">
-                            <h:panelGrid columns="1">
-                                <h:outputText value="Nombre de Usuario: "/>
-                                <h:inputText id="txtUsr" value="#{sesionMB.nombreUsuario}"
-                                             class="form-control" required="true" label="Nombre de Usuario"/>
-                                <!--<h:message for="txtUsr"/>-->
-                                <br/>
-                                <h:outputText value="Contraseña:  "/>
-                                <h:inputText id="txtPass" value="#{sesionMB.password}"
-                                             class="form-control" required="true" label="Contraseña"/>
-                                <!--<h:message for="txtPass"/>-->
-
-                            </h:panelGrid>
-                            
-                            <p:dialog visible="true" header="Info" widgetVar="dlg1" minHeight="40" width="350" showEffect="fade">
-    <p class="p-m-0">Usuario o contraseña incorrectos <br/> Intentelo nuevamente.</p>
-</p:dialog>
-                            <br/>
-                            <h:commandButton action="#{sesionMB.validarCredenciales()}"
-                                             value="Iniciar Sesión"
-                                             class="btn btn-outline-success d-block"/>
-
-                        </h:form>
-                    </p:panel>
-
-                </center>
+                    <p:divider />
+                    <h:form>
+                        <h:commandLink action="index?faces-redirect=true" class="btn btn-outline-info">
+                            Regresar al Inicio
+                        </h:commandLink>
+                    </h:form>
+                </p:panel>
 
 
-
-            </h:form>
+                <p:dialog visible="true" header="Info" widgetVar="dlg1" minHeight="40" width="350" showEffect="fade">
+                    <p class="p-m-0 text-danger">Usuario o contraseña incorrectos <br/> Intentelo nuevamente.</p>
+                </p:dialog>
+            </center>
         </f:view>
     </h:body>
 </html>

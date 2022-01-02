@@ -106,17 +106,17 @@ public class ProductoMB extends BaseBean implements Serializable {
     public String preparedAdd(){
         dto = new Producto();
         setAccion(ACC_CREAR);
-        return "/producto/productoForm.xhtml?faces-redirect=true";
+        return "productoForm.xhtml?faces-redirect=true";
     }
     
     public String preparedUpdate(){
         setAccion(ACC_ACTUALIZAR);
-        return "/producto/productoForm.xhtml?faces-redirect=true";
+        return "productoForm.xhtml?faces-redirect=true";
     }
     
     public String preparedVisualise(){
         setAccion(ACC_VISUALIZAR);
-        return "/producto/datosProducto.xhtml?faces-redirect=true";
+        return "datosProducto.xhtml?faces-redirect=true";
     }
     
     public String preparedListadoProductos(){
@@ -125,11 +125,11 @@ public class ProductoMB extends BaseBean implements Serializable {
     }
     
     public String preparedListadoCategorias(){
-        return "./categorias/listadoCategorias?faces-redirect=true";
+        return "listadoCategorias?faces-redirect=true";
     }
     
     public String preparedIndex(){
-        return "./index?faces-redirect=true";
+        return "index?faces-redirect=true";
     }
     
     public Boolean validate(){

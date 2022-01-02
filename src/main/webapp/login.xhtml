@@ -11,22 +11,13 @@
     </h:head>
     <h:body>
         <f:view>
-            <h:form id="frmLogin">
+            <center>
 
-                <p:growl id="messages"/>
+                <br/><br/><br/>
+                <p:panel header="Iniciar Sesión" style="width: 22rem;">
+                    <p:growl id="messages"/>
+                    <h:form id="frmLogin">
 
-
-
-
-                <br/>
-
-
-
-                <center>
-                    <br/><br/><br/>
-                    <p:panel header="Iniciar Sesión" style="width: 22rem;">
-
-                        <h:form id="frmLoginForm">
                             <h:panelGrid columns="1">
                                 <h:outputText value="Nombre de Usuario: "/>
                                 <h:inputText id="txtUsr" value="#{sesionMB.nombreUsuario}"
@@ -34,7 +25,7 @@
                                 <!--<h:message for="txtUsr"/>-->
 
                                 <h:outputText value="Contraseña:  "/>
-                                <h:inputText id="txtPass" value="#{sesionMB.password}"
+                                <p:password  id="txtPass" value="#{sesionMB.password}"
                                              class="form-control" required="true" label="Contraseña"/>
                                 <!--<h:message for="txtPass"/>-->
 
@@ -42,13 +33,18 @@
                             <br/>
                             <h:commandButton action="#{sesionMB.validarCredenciales()}"
                                              value="Iniciar Sesión"
-                                             class="btn btn-primary"/>
-                        </h:form>                       
-                      
-                    </p:panel>
+                                             class="btn btn-primary"/>                     
+                    </h:form>
+                    
+                    <p:divider />
+                    <h:form>
+                        <h:commandLink action="index?faces-redirect=true" class="btn btn-outline-info">
+                            Regresar al Inicio
+                        </h:commandLink>
+                    </h:form>
 
-                </center>
-            </h:form>
+                </p:panel>
+            </center>
         </f:view>
     </h:body>
 </html>

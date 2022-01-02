@@ -60,19 +60,19 @@ public class IndexMB extends BaseBean implements Serializable {
 
 
     public String preparedIndex(){
-        return "index.xhtml?faces-redirect=true";
+        return "index?faces-redirect=true";
     }
 
     public String preparedListadoProductos(){
-        return "/producto/listadoProductos?faces-redirect=true";
+        return "listadoProductos?faces-redirect=true";
     }
 
     public String preparedListadoCategorias(){
-        return "/categoria/listadoCategorias?faces-redirect=true";
+        return "listadoCategorias?faces-redirect=true";
     }
 
     public String preparedListadoUsuarios(){
-        return "/usuario/listadoUsuarios?faces-redirect=true";
+        return "listadoUsuarios?faces-redirect=true";
     }
 
     public void resetarMensaje(){

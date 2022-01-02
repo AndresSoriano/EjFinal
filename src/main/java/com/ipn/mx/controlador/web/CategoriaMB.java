@@ -59,17 +59,17 @@ public class CategoriaMB extends BaseBean implements Serializable {
     public String preparedAdd(){
         dto = new Categoria();
         setAccion(ACC_CREAR);
-        return "/categoria/categoriaForm.xhtml?faces-redirect=true";
+        return "categoriaForm.xhtml?faces-redirect=true";
     }
     
     public String preparedUpdate(){
         setAccion(ACC_ACTUALIZAR);
-        return "/categoria/categoriaForm.xhtml?faces-redirect=true";
+        return "categoriaForm.xhtml?faces-redirect=true";
     }
     
     public String preparedVisualise(){
         setAccion(ACC_VISUALIZAR);
-        return "/categoria/datosCategoria.xhtml?faces-redirect=true";
+        return "datosCategoria.xhtml?faces-redirect=true";
     }
     
     public String preparedListadoCategorias(){
@@ -78,7 +78,7 @@ public class CategoriaMB extends BaseBean implements Serializable {
     }
     
     public String preparedIndex(){
-        return "./index.xhtml?faces-redirect=true";
+        return "index?faces-redirect=true";
     }
     
     public Boolean validate(){

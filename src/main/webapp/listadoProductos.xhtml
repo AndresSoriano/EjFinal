@@ -87,7 +87,7 @@
                         <p:toolbarGroup align="right">
                             <p:commandButton value="#{msg['producto.boton.nuevo']}" action="#{productoMB.preparedAdd()}"
                                              immediate="true"
-                                             class="btn btn-outline-success">
+                                             class="btn btn-outline-success" rendered="#{!sesionMB.modoUnlogged}">
                             </p:commandButton>
                         </p:toolbarGroup>
                     </p:toolbar>
@@ -168,6 +168,14 @@
                     </p:panel>
 
 
+                    <center>
+                        <p:panel header="Sesion Requerida" rendered="#{sesionMB.modoUnlogged}"
+                                 style="width: 20rem;">
+                            <p:commandLink action="#{sesionMB.cerrarSesion()}" immediate="true" class="btn btn-outline-primary d-block">
+                                <p:outputLabel value="Regresar al Inicio"/>
+                            </p:commandLink>
+                        </p:panel>
+                    </center>
                 </div>
             </h:form>
         </f:view>

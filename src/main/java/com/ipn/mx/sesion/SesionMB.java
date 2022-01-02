@@ -46,10 +46,6 @@ public class SesionMB extends SesionBean implements Serializable {
         return "index.xhtml?faces-redirect=true";
     }
 
-    public String preparedRegitro() {
-        setAccion(ACC_UNLOGGED);
-        return "/usuario/usuarioForm?faces-redirect=true";
-    }
 
     public String validarCredenciales() {
         logger.log(Level.INFO, "validando datos...: ");
@@ -85,7 +81,7 @@ public class SesionMB extends SesionBean implements Serializable {
 
         sesion.getSession().invalidate();
         setAccion(ACC_UNLOGGED);
-        return "index.xhtml?faces-redirect=true";
+        return "index?faces-redirect=true";
     }
 
     public void buttonAction(ActionEvent actionEvent) {

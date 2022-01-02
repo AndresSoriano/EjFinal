@@ -64,17 +64,17 @@ public class UsuarioMB extends BaseBean implements Serializable {
     public String preparedAdd(){
         dto = new Usuario();
         setAccion(ACC_CREAR);
-        return "/usuario/usuarioForm.xhtml?faces-redirect=true";
+        return "usuarioForm.xhtml?faces-redirect=true";
     }
     
     public String preparedUpdate(){
         setAccion(ACC_ACTUALIZAR);
-        return "/usuario/usuarioForm.xhtml?faces-redirect=true";
+        return "usuarioForm.xhtml?faces-redirect=true";
     }
     
     public String preparedVisualise(){
         setAccion(ACC_VISUALIZAR);
-        return "/usuario/datosUsuario.xhtml?faces-redirect=true";
+        return "datosUsuario.xhtml?faces-redirect=true";
     }
     
     public String preparedListadoUsuarios(){
