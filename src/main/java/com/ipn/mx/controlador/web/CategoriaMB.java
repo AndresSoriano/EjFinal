@@ -16,8 +16,6 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
 import javax.faces.event.ActionEvent;
-import org.primefaces.model.chart.DonutChartModel;
-import org.primefaces.model.charts.ChartData;
 
 /**
  *
@@ -138,6 +136,5 @@ public class CategoriaMB extends BaseBean implements Serializable {
             e.printStackTrace();
         }
     }
-    
- 
+
 }

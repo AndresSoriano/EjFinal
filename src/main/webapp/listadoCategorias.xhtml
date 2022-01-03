@@ -69,6 +69,7 @@
                 <div class="container">
                     <center>
 
+                        
                         <br/>
                         <p:toolbar>
                             <p:toolbarGroup>
@@ -78,14 +79,14 @@
                                 </h2>
 
                             </p:toolbarGroup>
-                            <p:toolbarGroup align="right">
+                            <p:toolbarGroup align="right" rendered="#{!sesionMB.modoUnlogged}">
                                  <p:commandButton value="Ver Grafica" action="#{categoriaMB.preparedGrafica()}"
                                                  immediate="true"
-                                                 styleClass="ui-button-help" rendered="#{!sesionMB.modoUnlogged}">
+                                                 styleClass="ui-button-help">
                                 </p:commandButton>
+                                <a href="ReporteServlet?reporte=categorias" class="btn btn-outline-danger" target="_blank">Mostrar Reporte</a>
                                 <p:commandButton value="#{msg['categoria.boton.nuevo']}" action="#{categoriaMB.preparedAdd()}"
-                                                 immediate="true"
-                                                 rendered="#{!sesionMB.modoUnlogged}">
+                                                 immediate="true">
                                 </p:commandButton>
                             </p:toolbarGroup>
                         </p:toolbar>

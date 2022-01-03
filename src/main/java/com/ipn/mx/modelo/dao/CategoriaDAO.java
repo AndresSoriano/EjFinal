@@ -7,6 +7,8 @@ package com.ipn.mx.modelo.dao;
 
 import com.ipn.mx.modelo.entidades.Categoria;
 import com.ipn.mx.utilerias.HibernateUtil;
+import java.sql.Connection;
+import java.sql.DriverManager;
 import java.util.ArrayList;
 import java.util.List;
 import org.hibernate.HibernateException;
@@ -19,6 +21,7 @@ import org.hibernate.query.Query;
  * @author leoj_
  */
 public class CategoriaDAO {
+       
     public void create(Categoria dto){
         Session s = HibernateUtil.getSessiobFactory().getCurrentSession();
         Transaction tx = s.getTransaction();
