@@ -4,17 +4,17 @@
         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
     <session-factory>
-        <property name="connection.driver_class">org.postgresql.Driver</property>
+<!--        <property name="connection.driver_class">org.postgresql.Driver</property>
         <property name="connection.url">jdbc:postgresql://localhost:5432/base3cm13v2</property>
         <property name="connection.username">postgres</property>
         <property name="connection.password">admin</property>
-        <property name="connection.pool_size">1</property>
-        
-<!--        <property name="connection.driver_class">org.postgresql.Driver</property>
-        <property name="connection.url">jdbc:postgresql://ec2-34-203-114-67.compute-1.amazonaws.com:5432/d780j0238srfnp</property>
-        <property name="connection.username">ibzziwvzwildob</property>
-        <property name="connection.password">6d37cb439d728f6d702777701a3294c23ffb99322d3c0824abd016b6622eeaf8</property>
         <property name="connection.pool_size">1</property>-->
+        
+        <property name="connection.driver_class">org.postgresql.Driver</property>
+        <property name="connection.url">jdbc:postgresql://ec2-174-129-37-144.compute-1.amazonaws.com:5432/d52fhuga0cbijr</property>
+        <property name="connection.username">xeuypkajvsxnme</property>
+        <property name="connection.password">8a7dbc29094673aa7ffe757ccf3b91b8efa90dcae15a2df8d3517d226ada74ba</property>
+        <property name="connection.pool_size">1</property>
         
         <property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
         <property name="show_sql">true</property>

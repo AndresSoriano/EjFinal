@@ -40,6 +40,7 @@ public class ProductoMB extends BaseBean implements Serializable {
      * Creates a new instance of ProductoMB
      */
     public ProductoMB() {
+        listaCategoria = daoCat.readAll();
     }
     
     @PostConstruct
