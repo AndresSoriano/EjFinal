@@ -65,11 +65,8 @@
                     </f:facet>
                 </p:menubar>
 
-
                 <div class="container">
-                    <center>
-
-                        
+                    <center>                    
                         <br/>
                         <p:toolbar>
                             <p:toolbarGroup>
@@ -92,12 +89,7 @@
                         </p:toolbar>
 
                         <br/>
-
-
-
-
                         <p:panel header="#{msg['categoria.tabla.titulo']}" rendered="#{!sesionMB.modoUnlogged}"> 
-
 
                             <p:dataTable var="dto" 
                                          value="#{categoriaMB.listaCategorias}" 
@@ -108,7 +100,6 @@
                                     <f:facet name="header">
                                         <h:outputLabel id="lblIdCategoria" value="#{msg['categoria.tabla.clave']}"/>
                                     </f:facet>
-
 
                                     <p:commandLink action="#{categoriaMB.preparedVisualise()}" actionListener="#{categoriaMB.seleccionarCategoria}" immediate="true" class="btn btn-outline-warning">
                                         <f:param name="claveSel" value="#{dto.idCategoria}"/>
@@ -157,10 +148,8 @@
                             </p:commandLink>
                         </p:panel>
 
-
                     </center>
                 </div>
-
             </h:form>
         </f:view>
     </h:body>

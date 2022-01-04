@@ -66,7 +66,6 @@
                 </p:menubar>
 
                 <div class="container">
-
                     <br/>
                     <p:toolbar>
                         <p:toolbarGroup>
@@ -99,7 +98,6 @@
                                 <f:facet name="header">
                                     <p:outputLabel id="lblIdProducto" value="#{msg['producto.tabla.claveProducto']}"/>
                                 </f:facet>
-
 
                                 <p:commandLink action="#{productoMB.preparedVisualise()}" actionListener="#{productoMB.seleccionarProducto}" immediate="true" class="btn btn-outline-warning">
                                     <f:param name="claveSel" value="#{dto.idProducto}"/>
@@ -162,7 +160,6 @@
                             </p:column>
                         </p:dataTable>
                     </p:panel>
-
 
                     <center>
                         <p:panel header="Sesion Requerida" rendered="#{sesionMB.modoUnlogged}"

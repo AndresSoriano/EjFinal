@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.ipn.mx.controlador.web;
 
 import com.ipn.mx.modelo.dao.UsuarioDAO;
@@ -18,8 +13,7 @@ import javax.faces.context.FacesContext;
 import javax.faces.event.ActionEvent;
 
 /**
- *
- * @author leoj_
+ * @author Soriano
  */
 @ManagedBean(name = "usuarioMB")
 @SessionScoped
@@ -28,10 +22,7 @@ public class UsuarioMB extends BaseBean implements Serializable {
     
     private Usuario dto;
     private List<Usuario> listaUsuarios;
-   
-    /**
-     * Creates a new instance of ProductoMB
-     */
+    /* Creates a new instance of ProductoMB */
     public UsuarioMB() {
     }
     
@@ -56,11 +47,6 @@ public class UsuarioMB extends BaseBean implements Serializable {
     public void setListaUsuarios(List<Usuario> listaUsuarios) {
         this.listaUsuarios = listaUsuarios;
     }
-
-    
-    
-    
-    
     
     public String preparedAdd(){
         dto = new Usuario();
@@ -87,14 +73,12 @@ public class UsuarioMB extends BaseBean implements Serializable {
         init();
         return "listadoUsuarios?faces-redirect=true";
     }
-    
-    
+        
     public Boolean validate(){
         boolean valido = true;
         if(dto.getNombre()==null){
             //Realizar las validaciones
         }
-        
         return valido;
     }
     
@@ -157,5 +141,4 @@ public class UsuarioMB extends BaseBean implements Serializable {
             e.printStackTrace();
         }
     }
-
 }

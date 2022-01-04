@@ -1,4 +1,3 @@
-
 package com.ipn.mx.modelo.dao;
 
 import com.ipn.mx.modelo.entidades.Producto;
@@ -11,8 +10,7 @@ import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
 /**
- *
- * @author leoj_
+ * @author Soriano
  */
 public class ProductoDAO {
     public void create(Producto dto){
@@ -48,10 +46,7 @@ public class ProductoDAO {
         Transaction tx = s.getTransaction();
         try{
             tx.begin();
-            
-            //recuperar entidad completa
             dto=(s.get(dto.getClass(), dto.getIdProducto()));
-            
             s.delete(dto);
             tx.commit();
         }catch(HibernateException e){
@@ -85,8 +80,7 @@ public class ProductoDAO {
         try{
             tx.begin();
             Query q = s.createQuery("from Producto as c order by c.idProducto");
-            lista = q.list();            
-            
+            lista = q.list();
             tx.commit();
         }catch(HibernateException e){
             if(tx != null && tx.isActive()){
@@ -97,15 +91,11 @@ public class ProductoDAO {
     }
     
     public static void main(String[] args){
-        
         ProductoDAO dao = new ProductoDAO();
         Producto dto = new Producto();
-       
         dto.setIdProducto(3);
-
         dto = dao.read(dto);
         dao.delete(dto);
-        
         System.out.println(dao.readAll());
     }
 }

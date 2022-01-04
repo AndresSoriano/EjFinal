@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.ipn.mx.sesion;
 
 import java.util.logging.Level;
@@ -13,8 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 /**
- *
- * @author leoj_
+ * @author Soriano
  */
 public class Sesion {
     private static Sesion sesion;
@@ -67,7 +61,6 @@ public class Sesion {
         HttpServletRequest request = getRequest();
         request.setAttribute(attrName, attr);
     }
-    
 
     public HttpSession getSession() {
         return session;
@@ -82,5 +75,4 @@ public class Sesion {
         session = getSession();
         session.setAttribute(attrName, attr);
     }
-   
 }

@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.ipn.mx.modelo.dao;
 
 import com.ipn.mx.modelo.entidades.Categoria;
@@ -17,8 +12,7 @@ import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
 /**
- *
- * @author leoj_
+ * @author Soriano
  */
 public class CategoriaDAO {
        
@@ -56,10 +50,8 @@ public class CategoriaDAO {
                 
         try{
             tx.begin();
-            
             //Recuperar la entidad completa
             dto = (s.get(dto.getClass(), dto.getIdCategoria()));
-            
             s.delete(dto);
             tx.commit();
         }catch(HibernateException e){
@@ -108,18 +100,12 @@ public class CategoriaDAO {
         return lista;
     }
     
-    public static void main(String[] args){
-        
+    public static void main(String[] args){        
         CategoriaDAO dao = new CategoriaDAO();
         Categoria dto = new Categoria();
-       
-//        dto.setIdCategoria(3);
         dto.setNombreCategoria("Categoria prueba X");
         dto.setDescripcionCategoria("Descripcion prueba x");
         dao.create(dto);
-        
-//        dao.delete(dto);
-        
         System.out.println(dao.readAll());
     }
 }

@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.ipn.mx.graficas;
 
 import com.ipn.mx.modelo.dao.CategoriaDAO;
@@ -22,8 +17,7 @@ import org.primefaces.model.chart.ChartSeries;
 import org.primefaces.model.chart.DonutChartModel;
 
 /**
- *
- * @author leoj_
+ * @author Soriano
  */
 @ManagedBean(name = "graficaProductosMB")
 @SessionScoped
@@ -63,7 +57,7 @@ public class GraficaProductosMB {
         }
 
         graficoProductos.addSeries(existencias);
-//        graficoProductos.setTitle("Existencia de Productos");
+//      graficoProductos.setTitle("Existencia de Productos");
         graficoProductos.setShowPointLabels(true);
 
         Axis xAxis = graficoProductos.getAxis(AxisType.X);
@@ -76,7 +70,5 @@ public class GraficaProductosMB {
 
         graficoProductos.setSeriesColors("00e0e0");
         graficoProductos.setShadow(false);
-
     }
-
 }

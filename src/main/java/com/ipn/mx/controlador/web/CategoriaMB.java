@@ -1,10 +1,5 @@
 package com.ipn.mx.controlador.web;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 import com.ipn.mx.modelo.dao.CategoriaDAO;
 import com.ipn.mx.modelo.entidades.Categoria;
@@ -18,8 +13,7 @@ import javax.faces.context.FacesContext;
 import javax.faces.event.ActionEvent;
 
 /**
- *
- * @author leoj_
+ * @author Soriano
  */
 @ManagedBean(name = "categoriaMB")
 @SessionScoped
@@ -27,7 +21,6 @@ public class CategoriaMB extends BaseBean implements Serializable {
     
 
     private final CategoriaDAO dao = new CategoriaDAO();
-    
     private Categoria dto;
     private List<Categoria> listaCategorias;
 
@@ -54,9 +47,7 @@ public class CategoriaMB extends BaseBean implements Serializable {
     public void setListaCategorias(List<Categoria> listaCategorias) {
         this.listaCategorias = listaCategorias;
     }
-    
-    
-    
+      
     public String preparedAdd(){
         dto = new Categoria();
         setAccion(ACC_CREAR);
@@ -136,5 +127,4 @@ public class CategoriaMB extends BaseBean implements Serializable {
             e.printStackTrace();
         }
     }
-
 }

@@ -12,7 +12,6 @@
     <h:body>
         <f:view>
             <center>
-
                 <br/><br/><br/>
                 <p:panel header="Iniciar Sesión" style="width: 22rem;">
                     <p:growl id="messages"/>
@@ -22,13 +21,11 @@
                                 <h:outputText value="Nombre de Usuario: "/>
                                 <h:inputText id="txtUsr" value="#{sesionMB.nombreUsuario}"
                                              class="form-control" required="true" label="Nombre de Usuario"/>
-                                <!--<h:message for="txtUsr"/>-->
-
+                                
                                 <h:outputText value="Contraseña:  "/>
                                 <p:password  id="txtPass" value="#{sesionMB.password}"
                                              class="form-control" required="true" label="Contraseña"/>
-                                <!--<h:message for="txtPass"/>-->
-
+                                
                             </h:panelGrid>
                             <br/>
                             <h:commandButton action="#{sesionMB.validarCredenciales()}"
@@ -42,7 +39,6 @@
                             Regresar al Inicio
                         </h:commandLink>
                     </h:form>
-
                 </p:panel>
             </center>
         </f:view>

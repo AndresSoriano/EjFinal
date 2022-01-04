@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.ipn.mx.sesion;
 
 import com.ipn.mx.modelo.dao.UsuarioDAO;
@@ -19,8 +14,7 @@ import javax.faces.context.FacesContext;
 import javax.faces.event.ActionEvent;
 
 /**
- *
- * @author leoj_
+ * @author Soriano
  */
 @ManagedBean(name = "sesionMB")
 @SessionScoped
@@ -78,7 +72,6 @@ public class SesionMB extends SesionBean implements Serializable {
 
     public String cerrarSesion() {
         logger.log(Level.INFO, "Entrando a cerrar sesion: ");
-
 //        sesion.getSession().invalidate();
         setAccion(ACC_UNLOGGED);
         return "index?faces-redirect=true";
@@ -108,5 +101,4 @@ public class SesionMB extends SesionBean implements Serializable {
     public void setPassword(String password) {
         this.password = password;
     }
-
 }

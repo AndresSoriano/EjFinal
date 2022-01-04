@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.ipn.mx.utilerias;
 
 import org.hibernate.SessionFactory;
@@ -12,8 +7,7 @@ import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 
 /**
- *
- * @author leoj_
+ * @author Soriano
  */
 public class HibernateUtil {
 
@@ -41,5 +35,4 @@ public class HibernateUtil {
             StandardServiceRegistryBuilder.destroy(registry);
         }
     }
-
 }

@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.ipn.mx.graficas;
 
 import com.ipn.mx.modelo.dao.CategoriaDAO;
@@ -18,8 +13,7 @@ import javax.faces.bean.SessionScoped;
 import org.primefaces.model.chart.DonutChartModel;
 
 /**
- *
- * @author leoj_
+ * @author Soriano
  */
 @ManagedBean(name = "graficaCategoriasMB")
 @SessionScoped
@@ -72,11 +66,8 @@ public class GraficaCategoriasMB {
             }
             if(cont>=0)
                 circle1.put(c.getNombreCategoria(), cont);
-        }
-
-      
+        }    
         model.addCircle(circle1);
         return model;
     }
-
 }

@@ -11,11 +11,8 @@
     <h:body>
         <div class="container">
 
-
             <center>
-
                 <br/><br/><br/>
-
                 <div class="card border-primary mb-3 col-sm-4">
                     <div class="card-header">
                         <h2 class="text-center text-primary">Usuario</h2>
@@ -29,39 +26,31 @@
                                     <h:outputText value="Nombre: "/>
                                     <h:inputText id="txtNombre" value="#{usuarioMB.dto.nombre}"
                                                  class="form-control" required="true"/>
-                                    <!--<h:message for="txtNombre"/>-->
-
+                                    
                                     <h:outputText value="Ap.Paterno  "/>
                                     <h:inputText id="txtPaterno" value="#{usuarioMB.dto.paterno}"
                                                  class="form-control" required="true"/>
-                                    <!--<h:message for="txtNombre"/>-->
-
+                                    
                                     <h:outputText value="Ap. Materno "/>
                                     <h:inputText id="txtMaterno" value="#{usuarioMB.dto.materno}"
                                                  class="form-control" required="true"/>
-                                    <!--<h:message for="txtNombre"/>-->
-
+                                    
                                     <h:outputText value="Usuario "/>
                                     <h:inputText id="txtUsuario" value="#{usuarioMB.dto.nombreUsuario}"
                                                  class="form-control" required="true"/>
-                                    <!--<h:message for="txtNombre"/>-->
-
+                                    
                                     <h:outputText value="Contrasenia "/>
                                     <h:inputText id="txtPass" value="#{usuarioMB.dto.claveUsuario}"
                                                  class="form-control" required="true"/>
-                                    <!--<h:message for="txtNombre"/>-->
-
+                                    
                                     <h:outputText value="Correo"/>
                                     <h:inputText id="txtEmail" value="#{usuarioMB.dto.email}"
                                                  class="form-control" required="true"/>
-                                    <!--<h:message for="txtNombre"/>-->
-
+                                    
                                     <h:outputText value="Imagen "/>
                                     <h:inputText id="txtImagen" value="#{usuarioMB.dto.imagen}"
                                                  class="form-control" required="true"/>
-                                    <!--<h:message for="txtNombre"/>-->
-
-
+                                    
                                 </h:panelGrid>
                                 <br/>
                                 <h:commandLink action="listadoUsuarios?faces-redirect=true" class="btn btn-outline-info d-block">
@@ -73,7 +62,6 @@
                     </div>
                 </div>
             </center>
-
         </div>
     </h:body>
 </html>

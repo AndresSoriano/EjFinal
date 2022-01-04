@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.ipn.mx.controlador.web;
 
 import com.ipn.mx.modelo.dao.CategoriaDAO;
@@ -19,8 +14,7 @@ import javax.faces.context.FacesContext;
 import javax.faces.event.ActionEvent;
 
 /**
- *
- * @author leoj_
+ * @author Soriano
  */
 @ManagedBean(name = "productoMB")
 @SessionScoped
@@ -30,8 +24,7 @@ public class ProductoMB extends BaseBean implements Serializable {
     
     private Producto dto;
     private List<Producto> listaProducto;
-    private List<Categoria> listaCategoria;
-    
+    private List<Categoria> listaCategoria;  
     private boolean msg = false;
     private String mensaje = "";
     private String alert = "";
@@ -46,8 +39,7 @@ public class ProductoMB extends BaseBean implements Serializable {
     @PostConstruct
     public void init(){
         listaCategoria = new ArrayList<>();
-        listaProducto = new ArrayList<>();
-        
+        listaProducto = new ArrayList<>(); 
         listaCategoria = daoCat.readAll();
         listaProducto = dao.readAll();
         msg=false;
@@ -100,10 +92,7 @@ public class ProductoMB extends BaseBean implements Serializable {
     public void setMsg(boolean msg) {
         this.msg = msg;
     }
-    
-    
-    
-    
+        
     public String preparedAdd(){
         dto = new Producto();
         setAccion(ACC_CREAR);
@@ -142,7 +131,6 @@ public class ProductoMB extends BaseBean implements Serializable {
         if(dto.getNombreProducto()==null){
             //Realizar las validaciones
         }
-        
         return valido;
     }
     

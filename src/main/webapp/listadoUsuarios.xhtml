@@ -66,8 +66,6 @@
                 </p:menubar>
 
                 <div class="container">
-
-
                     <br/>
                     <p:toolbar>
                         <p:toolbarGroup>
@@ -83,9 +81,6 @@
                         </p:toolbarGroup>
                     </p:toolbar>
                     <br/>
-
-
-
                     <p:panel header="#{msg['usuario.tabla.titulo']}" rendered="#{!sesionMB.modoUnlogged}">   
                         <p:dataTable var="dto" value="#{usuarioMB.listaUsuarios}" 
                                      rows="5" paginator="true" class="table">
@@ -93,7 +88,6 @@
                                 <f:facet name="header">
                                     <h:outputLabel id="lblIdUsuario" value="Clave"/>
                                 </f:facet>
-
 
                                 <h:commandLink action="#{usuarioMB.preparedVisualise()}" actionListener="#{usuarioMB.seleccionarUsuario}" immediate="true" class="btn btn-outline-warning">
                                     <f:param name="claveSel" value="#{dto.idUsuario}"/>
@@ -125,12 +119,12 @@
                                 <h:outputText value="#{dto.nombreUsuario}"/>
                             </p:column>
 
-                            <!--                                    <h:column>
-                                                                    <f:facet name="header">
-                                                                        <h:outputLabel id="lblPassword" value="Contrasenia"/>
-                                                                    </f:facet>
-                                                                    <h:outputText value="#{dto.claveUsuario}"/>
-                                                                </h:column>-->
+                            <!--<h:column>
+                                <f:facet name="header">
+                                <h:outputLabel id="lblPassword" value="Contrasenia"/>
+                                </f:facet>
+                                <h:outputText value="#{dto.claveUsuario}"/>
+                                </h:column>-->
 
                             <p:column>
                                 <f:facet name="header">
@@ -146,13 +140,12 @@
                                 <h:outputText value="#{dto.tipoUsuario}"/>
                             </p:column>
 
-                            <!--                                    <h:column>
-                                                                    <f:facet name="header">
-                                                                        <h:outputLabel id="lblImagen" value="Imagen"/>
-                                                                    </f:facet>
-                                                                    <h:outputText value="#{dto.imagen}"/>
-                                                                </h:column>-->
-
+                            <!--<h:column>
+                                <f:facet name="header">
+                                <h:outputLabel id="lblImagen" value="Imagen"/>
+                                </f:facet>
+                                <h:outputText value="#{dto.imagen}"/>
+                                </h:column>-->
 
                             <p:column>
                                 <f:facet name="header">

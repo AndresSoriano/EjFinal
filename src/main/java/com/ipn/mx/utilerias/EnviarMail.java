@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.ipn.mx.utilerias;
 
 import java.util.Properties;
@@ -17,8 +12,7 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
 /**
- *
- * @author leoj_
+ * @author Soriano
  */
 public class EnviarMail {
     public void enviarCorreo(String destinatario, String asunto, String mensaje){
@@ -28,18 +22,18 @@ public class EnviarMail {
             p.setProperty("mail.smtp.host", "smtp.gmail.com");
             p.setProperty("mail.smtp.starttls.enable", "true");
             p.setProperty("mail.smtp.port", "587");
-            p.setProperty("mail.smtp.user", "correonotificacioneswad@gmail.com");
+            p.setProperty("mail.smtp.user", "M4ndress@gmail.com");
             p.setProperty("mail.smtp.auth", "true");
             
             Session s = Session.getDefaultInstance(p);
             MimeMessage elMensaje = new MimeMessage(s);
             elMensaje.addRecipient(Message.RecipientType.TO, new InternetAddress(destinatario));
-//            elMensaje.addRecipient(Message.RecipientType.CC, new InternetAddress("leojjosepf@gmail.com"));
+//          elMensaje.addRecipient(Message.RecipientType.CC, new InternetAddress("leojjosepf@gmail.com"));
             elMensaje.setSubject(asunto);
             elMensaje.setText(mensaje);
             
             Transport t = s.getTransport("smtp");
-            t.connect(p.getProperty("user"), "Claveadmin12345$");
+            t.connect(p.getProperty("user"), "M4ndr3$$");
             t.sendMessage(elMensaje, elMensaje.getAllRecipients());
             t.close();
             
@@ -57,11 +51,9 @@ public class EnviarMail {
     
     public void main (String[] args){
         EnviarMail email = new EnviarMail();
-        String destinatario = "leoj_josepf@hotmail.com";
+        String destinatario = "M4ndress@gmail.com";
         String asunto = "Registro Satisfactorio";
         String texto = "Este es el mensaje!";
-        
         email.enviarCorreo(destinatario, asunto, texto);
-        
-    }
+        }
 }
